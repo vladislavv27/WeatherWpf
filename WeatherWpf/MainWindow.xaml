@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherWpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" MinHeight="450" MinWidth="800" MaxHeight="450" MaxWidth="800">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                <GradientStop Color="#654ea3" Offset="0.0" />
+                <GradientStop Color="#eaafc8" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox Name="textboxCity" HorizontalAlignment="Left" Height="32" Margin="40,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="124" FontSize="16"/>
+        <Button Name="search" Content="Search" HorizontalAlignment="Left" Height="32" Margin="50,97,0,0" VerticalAlignment="Top" Width="104" Click="ButtonSearch_Click" Background="{x:Null}" BorderBrush="White" RenderTransformOrigin="1.48,0.745" Foreground="White" FontSize="16"/>
+        <Label Content="Enter your city" HorizontalAlignment="Left" Height="34" Margin="43,16,0,0" VerticalAlignment="Top" Width="121" Foreground="#FFF7F7F7" FontSize="16"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="336,50,0,0" VerticalAlignment="Top" Width="137"/>
+        <Label Content="Wind speed:" HorizontalAlignment="Left" Height="35" Margin="573,217,0,0" VerticalAlignment="Top" Width="92" Foreground="White" FontSize="14" FontWeight="Bold" />
+        <Label Content="Preassure" HorizontalAlignment="Left" Height="35" Margin="573,291,0,0" VerticalAlignment="Top" Width="92" Foreground="White" FontSize="14" FontWeight="Bold" />
+        <Label Content="Sunrise:" HorizontalAlignment="Center" Height="35" Margin="0,214,0,0" VerticalAlignment="Top" Width="92" Foreground="White" FontSize="14" FontWeight="Bold" />
+        <Label Content="Sunset:" HorizontalAlignment="Center" Height="35" Margin="0,288,0,0" VerticalAlignment="Top" Width="92" Foreground="White" FontSize="14" FontWeight="Bold" />
+        <Label Content="Condition:" HorizontalAlignment="Left" Height="35" Margin="141,217,0,0" VerticalAlignment="Top" Width="92" Foreground="White" FontSize="14" FontWeight="Bold" />
+        <Label Content="Detail" HorizontalAlignment="Left" Height="35" Margin="141,291,0,0" VerticalAlignment="Top" Width="92" Foreground="White" FontSize="14" FontWeight="Bold" />
+        <Label Content="Sunrise" HorizontalAlignment="Center" Height="35" Margin="0,214,0,0" VerticalAlignment="Top" Width="92" Foreground="White" FontSize="14" FontWeight="Bold" />
+        <Label Name="sunrise" Content="N/A" HorizontalAlignment="Left" Height="35" Margin="416,214,0,0" VerticalAlignment="Top" Width="92" Foreground="White" FontSize="14" FontWeight="Bold" />
+        <Label Name="city" Content="N/A" HorizontalAlignment="Left" Height="35" Margin="416,288,0,0" VerticalAlignment="Top" Width="92" Foreground="White" FontSize="14" FontWeight="Bold" />
+        <Label x:Name="windspeed" Content="N/A" HorizontalAlignment="Left" Height="35" Margin="670,217,0,0" VerticalAlignment="Top" Width="92" Foreground="White" FontSize="14" FontWeight="Bold" />
+        <Label x:Name="preassure" Content="N/A" HorizontalAlignment="Left" Height="35" Margin="665,291,0,0" VerticalAlignment="Top" Width="92" Foreground="White" FontSize="14" FontWeight="Bold" />
 
     </Grid>
 </Window>
